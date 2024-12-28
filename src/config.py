@@ -1,7 +1,7 @@
 import os
-from typing import Dict
 from pathlib import Path
 from dotenv import load_dotenv
+from typing import Dict, Literal
 from pydantic_settings import BaseSettings
 
 
@@ -33,9 +33,12 @@ class RabbitSettings(BaseSettings):
     project_queue_name: str = "suchef-orders"
 
 
-class OrdersAPISettings(BaseSettings):
+class APISettings(BaseSettings):
     url: str = os.getenv("API_URL")
     headers: Dict[str, str] = {"Content-Type": "application/json; charset=UTF-8"}
+
+    status: Literal["status"] = "status"
+    bonus: Literal["bonus"] = "bonus"
 
 
 class MessagesSettings(BaseSettings):
@@ -48,12 +51,24 @@ class BotSettings(BaseSettings):
     token: str = os.getenv("BOT_TOKEN")
 
 
+class ProjectSettings(BaseSettings):
+    name: Literal["Сушеф.рф"] = "Сушеф.рф"
+
+
+class ProductSettings(BaseSettings):
+    url: str = os.getenv("BASE_URL")
+
+    promo: str = os.getenv("PROMO_URL")
+
+
 class Settings(BaseSettings):
     bot: BotSettings = BotSettings()
     pg: PostgresSettings = PostgresSettings()
     msg: MessagesSettings = MessagesSettings()
     rabbit: RabbitSettings = RabbitSettings()
-    orders_api: OrdersAPISettings = OrdersAPISettings()
+    api: APISettings = APISettings()
+    product: ProductSettings = ProductSettings()
+    project: ProjectSettings = ProjectSettings()
 
 
 settings = Settings()

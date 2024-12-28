@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 from src.http.client import HTTPClient
 from src.http.response.text import TextResponse
-from src.services.promo.schemas import PromoSchema
+from src.services.promos.schemas import PromoSchema
 from src.config import settings
 
 

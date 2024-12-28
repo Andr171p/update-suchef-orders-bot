@@ -2,7 +2,7 @@ from typing import Optional, Dict, Any
 
 from aiohttp import ClientSession
 
-from src.http.responses.base import BaseResponse
+from src.http.response.base import BaseResponse
 from src.http.base import BaseClient
 
 

@@ -2,8 +2,8 @@ from typing import Dict, Any
 
 from aiohttp import ClientResponse
 
-from src.http.responses.base import BaseResponse
-from src.http.responses.utils import ResponseUtils
+from src.http.response.base import BaseResponse
+from src.http.response.utils import ResponseUtils
 
 
 class JsonResponse(ResponseUtils, BaseResponse):
