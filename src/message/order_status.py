@@ -3,7 +3,7 @@ from typing import Any, Dict
 from aiogram.types import InlineKeyboardMarkup
 
 from src.app.schemas.order import OrderSchema
-from src.app.keyboards import order_status
+from src.app.keyboards import order
 from src.message.message import BotMessage
 from src.config import settings
 from src import utils

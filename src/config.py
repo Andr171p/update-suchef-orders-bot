@@ -41,10 +41,13 @@ class APISettings(BaseSettings):
     bonus: Literal["bonus"] = "bonus"
 
 
-class MessagesSettings(BaseSettings):
-    start: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "start.json"
-    auth: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "auth.json"
-    statuses: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "statuses.json"
+class StaticSettings(BaseSettings):
+    start: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "start.json"
+    auth: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "auth.json"
+    statuses: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "statuses.json"
+
+    texts_dir: Path = BASE_DIR / "static" / "texts"
+    photo_dir: Path = BASE_DIR / "static" / "photos"
 
 
 class BotSettings(BaseSettings):
@@ -52,11 +55,8 @@ class BotSettings(BaseSettings):
 
 
 class ProjectSettings(BaseSettings):
-    name: Literal["Сушеф.рф"] = "Сушеф.рф"
-
-
-class ProductSettings(BaseSettings):
     url: str = os.getenv("BASE_URL")
+    name: Literal["Сушеф.рф"] = "Сушеф.рф"
 
     promo: str = os.getenv("PROMO_URL")
 
@@ -64,10 +64,9 @@ class ProductSettings(BaseSettings):
 class Settings(BaseSettings):
     bot: BotSettings = BotSettings()
     pg: PostgresSettings = PostgresSettings()
-    msg: MessagesSettings = MessagesSettings()
+    static: StaticSettings = StaticSettings()
     rabbit: RabbitSettings = RabbitSettings()
     api: APISettings = APISettings()
-    product: ProductSettings = ProductSettings()
     project: ProjectSettings = ProjectSettings()
 
 

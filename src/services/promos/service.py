@@ -11,8 +11,8 @@ from src.config import settings
 class PromoService:
     def __init__(
             self,
-            base_url: str = settings.product.url,
-            promo_page_url: str = settings.product.promo
+            base_url: str = settings.project.url,
+            promo_page_url: str = settings.project.promo
     ) -> None:
         self._base_url = base_url
         self._promo_page_url = promo_page_url

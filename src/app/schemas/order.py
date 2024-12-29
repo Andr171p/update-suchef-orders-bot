@@ -1,7 +1,7 @@
 from pydantic import BaseModel, field_validator
 from typing import List, Optional
 
-from src import utils
+from src.utils import format
 
 
 class OrderSchema(BaseModel):
@@ -26,12 +26,12 @@ class OrderSchema(BaseModel):
     @field_validator("number")
     @classmethod
     def validate_number(cls, v: str) -> str:
-        return utils.format_number(v)
+        return format.format_number(v)
 
     @field_validator("date")
     @classmethod
     def validate_date(cls, v: str) -> str:
-        return utils.format_date(v)
+        return format.format_date(v)
 
     @field_validator(
         "cooking_time_from",
@@ -41,21 +41,21 @@ class OrderSchema(BaseModel):
     )
     @classmethod
     def validate_time(cls, v: str) -> str:
-        return utils.format_time(v)
+        return format.format_time(v)
 
     @field_validator("phones")
     @classmethod
     def validate_phones(cls, values: List[str]) -> List[str]:
         phones: Optional[List[str]] = []
         for phone in values:
-            phone = utils.format_phone(phone)
+            phone = format.format_phone(phone)
             phones.append(phone)
         return phones
 
     @field_validator("delivery_adress")
     @classmethod
     def validate_adress(cls, value: str) -> str:
-        return utils.format_address(value)
+        return format.format_address(value)
 
 
 '''o = {

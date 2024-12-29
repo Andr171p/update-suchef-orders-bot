@@ -1,11 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 29.12.2024">
+      <change afterPath="$PROJECT_DIR$/src/app/keyboards/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/keyboards/menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/keyboards/promos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/format.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Готов для выдачи.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Готовится.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Доставлен.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Завершен успешно.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Новый.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Отменен.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Передан курьеру.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Передан на кухню.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Приготовлен.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Принят оператором.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Укомплектован.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Готов для выдачи.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Готовится.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Доставлен.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Завершен.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Отменен.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Передан курьеру.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Передан на кухню.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Приготовлен.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Принят оператором/Курьер.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Принят оператором/Самовывоз.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Укомплектован.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg_message/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg_message/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tg_message/order_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/keyboards/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/keyboards/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/schemas/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/auth.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/texts/auth.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/start.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/texts/start.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/texts/statuses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/promos/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/promos/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,10 +81,150 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.api.executor": "Run",
+    "Python.files.executor": "Run",
+    "Python.order_status (1).executor": "Run",
+    "Python.order_status.executor": "Run",
+    "Python.promo (1).executor": "Run",
+    "Python.promotions.executor": "Run",
+    "Python.service (1).executor": "Run",
+    "Python.service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/andre/OrderStatusAioBot/src/app/statics/photos"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
+      <recent name="C:\Users\andre\OrderStatusAioBot" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusAioBot" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.order_status (1)">
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/utils/files.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="order" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/keyboards" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\OrderStatusAioBot\src\app\keyboards\order.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="order_status (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tg_message" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tg_message/order_status.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="service (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/services/flyers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/services/flyers/service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.order_status (1)" />
+        <item itemvalue="Python.files" />
+        <item itemvalue="Python.order_status" />
+        <item itemvalue="Python.api" />
+        <item itemvalue="Python.service (1)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -41,6 +241,19 @@
       <option name="presentableId" value="Default" />
       <updated>1735414686584</updated>
     </task>
+    <task id="LOCAL-00001" summary="[suchef-orders-status-bot] 29.12.2024">
+      <option name="closed" value="true" />
+      <created>1735421785494</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735421785494</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[suchef-orders-status-bot] 29.12.2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 29.12.2024" />
   </component>
 </project>

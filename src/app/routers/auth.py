@@ -3,7 +3,7 @@ from aiogram.types import Message
 
 from src.config import settings
 from src.utils import load_json, format_phone
-from src.app.keyboards import order_status
+from src.app.keyboards import menu_kb
 from src.app.schemas.user import UserSchema
 from src.app.logger import logger
 from src.database.models.user import UserModel
@@ -28,5 +28,5 @@ async def register_user(message: Message) -> None:
     text = await load_json(path=settings.msg.auth)
     await message.answer(
         text=text['success'],
-        reply_markup=await order_status.order_status_kb()
+        reply_markup=menu_kb()
     )

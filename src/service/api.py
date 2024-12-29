@@ -20,8 +20,8 @@ async def get_user_orders(phone: str) -> Dict[str, Any]:
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                url=settings.orders_api.url,
-                headers=settings.orders_api.headers,
+                url=settings.api.url,
+                headers=settings.api.headers,
                 json=data
             ) as response:
                 if is_ok(response=response):
