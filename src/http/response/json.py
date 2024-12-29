@@ -2,11 +2,11 @@ from typing import Dict, Any
 
 from aiohttp import ClientResponse
 
-from src.http.response.base import BaseResponse
-from src.http.response.utils import ResponseUtils
+from src.http.response.abc import AbstractResponse
+from src.http.response.checker import ResponseChecker
 
 
-class JsonResponse(ResponseUtils, BaseResponse):
+class JsonResponse(ResponseChecker, AbstractResponse):
     async def data(
             self,
             response: ClientResponse

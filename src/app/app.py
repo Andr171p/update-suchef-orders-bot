@@ -5,7 +5,5 @@ from contextlib import AbstractAsyncContextManager
 
 
 @asynccontextmanager
-async def lifespan(
-        app: FastAPI
-) -> AbstractAsyncContextManager[None]:
+async def lifespan(app: FastAPI) -> AbstractAsyncContextManager[None]:
     pass

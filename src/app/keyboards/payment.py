@@ -1,22 +1,7 @@
 from typing import List
 
-from aiogram.types import ReplyKeyboardMarkup
-from aiogram.types import KeyboardButton
 from aiogram.types import InlineKeyboardButton
 from aiogram.types import InlineKeyboardMarkup
-
-
-async def order_status_kb() -> ReplyKeyboardMarkup:
-    keyboard_list: List[List[KeyboardButton]] = [
-        [KeyboardButton(text="Статус заказа")]
-    ]
-    keyboard = ReplyKeyboardMarkup(
-        keyboard=keyboard_list,
-        resize_keyboard=True,
-        one_time_keyboard=True,
-        input_field_placeholder="Узнать статус заказа"
-    )
-    return keyboard
 
 
 def pay_link_kb(url: str) -> InlineKeyboardMarkup:

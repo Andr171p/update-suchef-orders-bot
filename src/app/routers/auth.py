@@ -1,14 +1,15 @@
+import logging
+
 from aiogram import F, Router
 from aiogram.types import Message
 
 from src.config import settings
-from src.utils import load_json, format_phone
+from src.utils.files import load_json_async
 from src.app.keyboards import menu_kb
-from src.app.schemas.user import UserSchema
-from src.app.logger import logger
-from src.database.models.user import UserModel
-from src.database.services.service import user_service
+from src.repository.auth import auth_repository
 
+
+log = logging.getLogger(__name__)
 
 auth_router = Router()
 
@@ -18,14 +19,9 @@ async def register_user(message: Message) -> None:
     user_id: int = message.from_user.id
     username: str = message.from_user.username
     phone: str = message.contact.phone_number
-    user = UserSchema(
-        user_id=user_id,
-        username=username,
-        phone=format_phone(phone)
-    )
-    logger.info(f"user: {user} shared contact")
-    _ = await user_service.add_user(user=UserModel(**user.__dict__))
-    text = await load_json(path=settings.msg.auth)
+    log.info(f"User: {user_id} shared contact")
+    _ = await auth_repository.register_user(user_id, username, phone)
+    text = await load_json_async(settings.msg.auth)
     await message.answer(
         text=text['success'],
         reply_markup=menu_kb()

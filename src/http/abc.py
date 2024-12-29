@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Dict, Any, Optional
 
 
-class BaseClient(ABC):
+class AbstractClient(ABC):
     @abstractmethod
     async def get(
             self,

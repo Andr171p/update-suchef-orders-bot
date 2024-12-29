@@ -37,13 +37,20 @@ class APISettings(BaseSettings):
     url: str = os.getenv("API_URL")
     headers: Dict[str, str] = {"Content-Type": "application/json; charset=UTF-8"}
 
-    status: Literal["status"] = "status"
-    bonus: Literal["bonus"] = "bonus"
+    class Commands:
+        status: Literal["status"] = "status"
+        bonus: Literal["bonus"] = "bonus"
+
+    cmd: Commands = Commands()
+
+    # status: Literal["status"] = "status"
+    # bonus: Literal["bonus"] = "bonus"
 
 
 class StaticSettings(BaseSettings):
-    start: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "start.json"
-    auth: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "auth.json"
+    start: Path = BASE_DIR / "static" / "texts" / "start.json"
+    auth: Path = BASE_DIR / "static" / "texts" / "auth.json"
+    exc: Path = BASE_DIR / "static" / "texts" / "exc.json"
     statuses: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "statuses.json"
 
     texts_dir: Path = BASE_DIR / "static" / "texts"
@@ -55,7 +62,7 @@ class BotSettings(BaseSettings):
 
 
 class ProjectSettings(BaseSettings):
-    url: str = os.getenv("BASE_URL")
+    url: str = os.getenv("PROJECT_URL")
     name: Literal["Сушеф.рф"] = "Сушеф.рф"
 
     promo: str = os.getenv("PROMO_URL")

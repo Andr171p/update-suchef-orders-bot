@@ -3,7 +3,7 @@ from aiogram.types import KeyboardButton
 from typing import List
 
 
-async def start_kb() -> ReplyKeyboardMarkup:
+def start_kb() -> ReplyKeyboardMarkup:
     keyboard_list: List[List[KeyboardButton]] = [
         [KeyboardButton(text="Регистрация", request_contact=True)]
     ]
@@ -11,6 +11,6 @@ async def start_kb() -> ReplyKeyboardMarkup:
         keyboard=keyboard_list,
         resize_keyboard=True,
         one_time_keyboard=True,
-        input_field_placeholder="Нажмите для регистрации"
+        input_field_placeholder="Нажмите для мгновенной регистрации"
     )
     return keyboard

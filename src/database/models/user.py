@@ -21,7 +21,7 @@ ModelType = TypeVar(
 )
 
 
-class UserModel(AbstractBase):
+class User(AbstractBase):
     user_id: Mapped[int] = mapped_column(BigInteger)
     username: Mapped[str] = mapped_column(nullable=True)
     phone: Mapped[str]

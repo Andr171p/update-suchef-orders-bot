@@ -6,7 +6,7 @@ from aiohttp import ClientResponse
 log = logging.getLogger(__name__)
 
 
-class ResponseUtils:
+class ResponseChecker:
     @staticmethod
     def is_ok(response: ClientResponse) -> bool:
         log.info("Response status code: %s", response.status)

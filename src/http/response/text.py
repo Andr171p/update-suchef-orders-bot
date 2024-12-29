@@ -1,10 +1,10 @@
 from aiohttp import ClientResponse
 
-from src.http.response.base import BaseResponse
-from src.http.response.utils import ResponseUtils
+from src.http.response.abc import AbstractResponse
+from src.http.response.checker import ResponseChecker
 
 
-class TextResponse(ResponseUtils, BaseResponse):
+class TextResponse(ResponseChecker, AbstractResponse):
     async def data(
             self,
             response: ClientResponse

@@ -2,13 +2,13 @@ from typing import Optional, Dict, Any
 
 from aiohttp import ClientSession
 
-from src.http.response.base import BaseResponse
-from src.http.base import BaseClient
+from src.http.response.abc import AbstractResponse
+from src.http.abc import AbstractClient
 
 
-class HTTPClient(BaseClient):
-    def __init__(self, response_type: BaseResponse) -> None:
-        self.response_type = response_type
+class HTTPClient(AbstractClient):
+    def __init__(self, response_type: AbstractResponse) -> None:
+        self._response_type = response_type
 
     async def get(
             self,
@@ -20,7 +20,7 @@ class HTTPClient(BaseClient):
                 url=url,
                 headers=headers
             ) as response:
-                return await self.response_type.data(response)
+                return await self._response_type.data(response)
 
     async def post(
             self,
@@ -34,4 +34,4 @@ class HTTPClient(BaseClient):
                 headers=headers,
                 json=json
             ) as response:
-                return await self.response_type.data(response)
+                return await self._response_type.data(response)

@@ -1,37 +1,39 @@
+import logging
+
 from aiogram import F, Router
 from aiogram.types import Message
-from typing import Any, Dict, List
 
+from src.repository.order import order_repository
+from src.message.order import OrderMessage
+from src.utils.files import load_json_async
+from src.app.keyboards.menu import menu_kb
 
-from src.app.schemas.order import OrderSchema
-from src.message.order_status import OrderStatus
-from src.database.services.service import user_service
-from src.service import api
-from src.utils import load_json
 from src.config import settings
 
 
-status_router = Router()
+log = logging.getLogger(__name__)
+
+order_router = Router()
 
 
-@status_router.message(F.text == "Статус заказа")
+@order_router.message(F.text == "Статус заказа")
 async def get_order_status(message: Message) -> None:
     user_id: int = message.from_user.id
-    user = await user_service.get_user(user_id)
-    phone: str = user.phone
-    response: Dict[str, Any] = await api.get_user_orders(phone=phone)
-    orders: List[Dict[str, Any]] = response['data']['orders']
-    if len(orders) != 0:
+    orders = await order_repository.get_user_orders(user_id)
+    if orders:
         for order in orders:
-            if order['project'] != "Дисконт Суши":
-                order_status = OrderStatus(order=OrderSchema(**order))
-                bot_message = await order_status.get_bot_message(user_id=user_id)
-                await message.answer(
-                    text=bot_message.text,
-                    reply_markup=bot_message.keyboard
-                )
+            order_message = OrderMessage(order)
+            msg = order_message.get_message()
+            await message.answer_photo(
+                photo=msg.photo,
+                caption=msg.text,
+                reply_markup=msg.keyboard
+            )
+            log.info("Sent order to user %s", user_id)
+            log.info(order)
     else:
-        template: Dict[str, str] = await load_json(path=settings.msg.auth)
+        template = await load_json_async(settings.static.exc)
         await message.answer(
-            text=template['empty']
+            text=template["empty"],
+            reply_markup=menu_kb()
         )

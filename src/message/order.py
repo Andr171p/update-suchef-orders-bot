@@ -1,11 +1,11 @@
 from pathlib import Path
 
-from aiogram.types import InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardMarkup, InputFile
 
-from src.app.schemas.order import OrderSchema
+from src.schemas.order import OrderSchema
 from src.app.keyboards import pay_link_kb, confirmed_link_kb
 
-from tg_message.base import BaseMessage
+from src.message.base import BaseMessage
 
 from src.utils.files import load_txt
 from src.config import settings
@@ -35,9 +35,10 @@ class OrderMessage:
         text: str = load_txt(path)
         return text.format(**self._order.model_dump())
 
-    def _get_photo(self) -> Path | str:
+    def _get_photo(self) -> InputFile:
         path: Path = self.photos_dir / f"{self._order.status}.png"
-        return path
+        photo = InputFile(str(path))
+        return photo
 
     def get_message(self) -> BaseMessage:
         return BaseMessage(

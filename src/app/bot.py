@@ -4,9 +4,13 @@ from aiogram.enums.parse_mode import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.memory import MemoryStorage
 
-from src.app.routers.start import start_router
-from src.app.routers.auth import auth_router
-from src.app.routers.order import status_router
+from src.app.routers import (
+    start_router,
+    auth_router,
+    order_router,
+    promos_router
+)
+
 from src.config import settings
 
 
@@ -21,7 +25,8 @@ dp: Dispatcher = Dispatcher(
 dp.include_routers(
     start_router,
     auth_router,
-    status_router
+    order_router,
+    promos_router
 )
 
 

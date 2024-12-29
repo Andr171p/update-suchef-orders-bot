@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from aiohttp import ClientResponse
 
 
-class BaseResponse(ABC):
+class AbstractResponse(ABC):
     @abstractmethod
     def is_ok(
             self,
