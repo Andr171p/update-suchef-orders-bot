@@ -18,9 +18,6 @@ class OrderService:
     async def get_orders(self, phone: str) -> List[OrderSchema]:
         if is_valid_phone(phone):
             phone = format_phone(phone)
-        print(phone)
-        print(settings.api.cmd.status)
-        print(type(settings.api.cmd.status))
         json = {
             "command": settings.api.cmd.status,
             "telefon": phone

@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 promos update">
-      <change beforePath="$PROJECT_DIR$/src/database/service/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/service/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/message/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response">
+      <change afterPath="$PROJECT_DIR$/src/app/keyboards/flyers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/message/abc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/message/flyers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/flyers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/schemas/flyers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photos/flyers/flyers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/flyers/Есть флаеры.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/flyers/Нет фишек.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/texts/flyers/Нет флаеров.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/order.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +51,7 @@
     "Python.auth.executor": "Run",
     "Python.config.executor": "Run",
     "Python.files.executor": "Run",
+    "Python.flyers.executor": "Run",
     "Python.main.executor": "Run",
     "Python.order (1).executor": "Run",
     "Python.order (2).executor": "Run",
@@ -50,11 +64,12 @@
     "Python.service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/OrderStatusAioBot/src/app/statics/photos"
+    "last_opened_file_path": "C:/Users/andre/OrderStatusAioBot/static/photos/flyers"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusAioBot\static\photos\flyers" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
       <recent name="C:\Users\andre\OrderStatusAioBot" />
     </key>
@@ -66,7 +81,29 @@
       <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.flyers">
+    <configuration name="flyers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/flyers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
@@ -155,35 +192,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\andre\OrderStatusAioBot\src\repository\user.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.flyers" />
         <item itemvalue="Python.order (1)" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.order (3)" />
         <item itemvalue="Python.order (2)" />
-        <item itemvalue="Python.user" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +250,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735558518699</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[suchef-orders-status-bot] 30.12.2024 production v2">
+      <option name="closed" value="true" />
+      <created>1735559162004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735559162004</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[suchef-orders-status-bot] 30.12.2024 production v2 add bs4 in reqs">
+      <option name="closed" value="true" />
+      <created>1735559330196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735559330196</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response">
+      <option name="closed" value="true" />
+      <created>1735560930504</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735560930504</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,6 +282,9 @@
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 promos update" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 promos update" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add bs4 in reqs" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response" />
   </component>
 </project>

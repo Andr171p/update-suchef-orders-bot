@@ -7,7 +7,8 @@ from src.app.routers import (
     start_router,
     register_router,
     order_router,
-    promos_router
+    promos_router,
+    flyers_router
 )
 
 from src.config import settings
@@ -25,5 +26,6 @@ dp.include_routers(
     start_router,
     register_router,
     order_router,
-    promos_router
+    promos_router,
+    flyers_router
 )
