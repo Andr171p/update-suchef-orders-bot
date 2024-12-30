@@ -26,10 +26,8 @@ class FlyersMessage(AbstractMessage):
         return flyers_kb()
 
     def _get_text(self) -> str:
-        if self._flyers.flyers >= 0 and self._flyers.chips >= 0:
+        if self._flyers.chips > 0:
             path: Path = self.texts_dir / "Есть флаеры.txt"
-        elif self._flyers.flyers == 0 and self._flyers.chips >= 0:
-            path: Path = self.texts_dir / "Нет флаеров.txt"
         else:
             path: Path = self.texts_dir / "Нет фишек.txt"
         text = load_txt(path)
