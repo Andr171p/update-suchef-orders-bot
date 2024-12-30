@@ -4,56 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 29.12.2024">
-      <change afterPath="$PROJECT_DIR$/src/app/keyboards/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/keyboards/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/keyboards/promos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/format.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Готов для выдачи.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Готовится.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Доставлен.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Завершен успешно.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Новый.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Отменен.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Передан курьеру.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Передан на кухню.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Приготовлен.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Принят оператором.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/statuses/Укомплектован.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Готов для выдачи.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Готовится.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Доставлен.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Завершен.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Отменен.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Передан курьеру.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Передан на кухню.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Приготовлен.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Принят оператором/Курьер.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Принят оператором/Самовывоз.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/statuses/Укомплектован.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg_message/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg_message/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tg_message/order_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 refactoring">
+      <change afterPath="$PROJECT_DIR$/src/orders_sender/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/orders_sender/consumer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/orders_sender/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/keyboards/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/keyboards/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/auth.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/texts/auth.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/start.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/texts/start.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/texts/statuses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_sender/processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_sender/sender.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/message/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/promos/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/promos/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/service/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/service/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/promos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +54,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.config.executor": "Run",
     "Python.files.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order (1).executor": "Run",
+    "Python.order (2).executor": "Run",
+    "Python.order (3).executor": "Run",
     "Python.order_status (1).executor": "Run",
     "Python.order_status.executor": "Run",
     "Python.promo (1).executor": "Run",
@@ -100,12 +78,37 @@
       <recent name="C:\Users\andre\OrderStatusAioBot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\service" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\database" />
       <recent name="C:\Users\andre\OrderStatusAioBot" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.order_status (1)">
-    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="order (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,7 +121,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/api.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/order.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +130,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="order (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,11 +139,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/utils/files.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/repository/order.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="order" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="order (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,11 +161,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/keyboards" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/message" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\andre\OrderStatusAioBot\src\app\keyboards\order.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/message/order.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,7 +174,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="order_status (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,33 +183,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tg_message" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tg_message/order_status.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="service (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/services/flyers" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/services/flyers/service.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\OrderStatusAioBot\src\repository\user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.order_status (1)" />
-        <item itemvalue="Python.files" />
-        <item itemvalue="Python.order_status" />
-        <item itemvalue="Python.api" />
-        <item itemvalue="Python.service (1)" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.order (1)" />
+        <item itemvalue="Python.order (3)" />
+        <item itemvalue="Python.order (2)" />
+        <item itemvalue="Python.user" />
       </list>
     </recent_temporary>
   </component>
@@ -249,11 +230,29 @@
       <option name="project" value="LOCAL" />
       <updated>1735421785494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[suchef-orders-status-bot] 30.12.2024">
+      <option name="closed" value="true" />
+      <created>1735504901606</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735504901606</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[suchef-orders-status-bot] 30.12.2024 refactoring">
+      <option name="closed" value="true" />
+      <created>1735515132984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735515132984</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[suchef-orders-status-bot] 29.12.2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 29.12.2024" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
   </component>
 </project>

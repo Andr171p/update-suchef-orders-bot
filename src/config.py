@@ -51,7 +51,7 @@ class StaticSettings(BaseSettings):
     start: Path = BASE_DIR / "static" / "texts" / "start.json"
     auth: Path = BASE_DIR / "static" / "texts" / "auth.json"
     exc: Path = BASE_DIR / "static" / "texts" / "exc.json"
-    statuses: Path = BASE_DIR / "src" / "app" / "static" / "texts" / "statuses.json"
+    statuses: Path = BASE_DIR / "static" / "texts" / "statuses.json"
 
     texts_dir: Path = BASE_DIR / "static" / "texts"
     photo_dir: Path = BASE_DIR / "static" / "photos"

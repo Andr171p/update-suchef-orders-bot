@@ -1,5 +1,3 @@
-import logging
-
 from typing import Any, Sequence
 from functools import singledispatchmethod
 
@@ -7,9 +5,6 @@ from sqlalchemy import select
 
 from src.database.context import DBSession
 from src.database.models.user import User
-
-
-log = logging.getLogger(__name__)
 
 
 class UserService(DBSession):
@@ -27,7 +22,6 @@ class UserService(DBSession):
             session.add(user)
             await session.commit()
             await session.refresh(user)
-            log.debug(f"User: {user} add to `users` successfully")
         return user
 
     async def update_user(self, user: User) -> User | None:
@@ -35,7 +29,6 @@ class UserService(DBSession):
             await session.merge(user)
             await session.commit()
             await session.refresh(user)
-            log.debug(f"User: {user} updated successfully")
         return user
 
     async def delete_user(self, user_id: int) -> User:
@@ -48,7 +41,6 @@ class UserService(DBSession):
             if user:
                 await session.delete(user)
                 await session.commit()
-                log.debug(f"User: {user} deleted successfully")
             return user.scalars().one()
 
     @singledispatchmethod
@@ -66,9 +58,7 @@ class UserService(DBSession):
             try:
                 return user.scalars().one()
             except Exception as _ex:
-                log.warning(_ex)
-                log.warning("User not found")
-                return
+                raise _ex
 
     @get_user.register
     async def _(self, phone: str) -> User | None:
@@ -81,9 +71,7 @@ class UserService(DBSession):
             try:
                 return user.scalars().one()
             except Exception as _ex:
-                log.warning(_ex)
-                log.warning("User not found")
-                return
+                raise _ex
 
     async def get_users(self) -> Sequence[User]:
         async with self.session() as session:

@@ -4,19 +4,17 @@ from aiogram import Bot
 
 from src.schemas.order import OrderSchema
 from src.message.order import OrderMessage
-from src.database.service.user import UserService
+from src.repository.user import user_repository
 
 
 log = logging.getLogger(__name__)
 
 
-class OrdersSender:
-    user_service = UserService()
-
+class OrderSender:
     def __init__(self, bot: Bot) -> None:
         self.bot = bot
 
-    async def send_message(
+    async def _send_message(
             self,
             user_id: int,
             order: OrderSchema
@@ -38,10 +36,10 @@ class OrdersSender:
     async def send_order(self, order: OrderSchema) -> None:
         phones = order.phones
         for phone in phones:
-            user = await self.user_service.get_user(phone)
+            user = await user_repository.get_user(phone)
             if user is not None:
                 user_id = user.user_id
-                await self.send_message(
+                await self._send_message(
                     user_id=user_id,
                     order=order
                 )

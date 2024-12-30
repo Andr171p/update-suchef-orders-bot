@@ -8,6 +8,9 @@ from aiogram.types.base import MutableTelegramObject
 
 
 class BaseMessage(BaseModel):
-    photo: Optional[InputFile]
+    photo: InputFile | None
     text: str
     keyboard: MutableTelegramObject | None
+
+    class Config:
+        arbitrary_types_allowed = True

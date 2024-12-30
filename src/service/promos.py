@@ -22,7 +22,7 @@ class PromoService:
             attrs={"class": "flex-grid__item flex-grid__item_max-width product-ajax-cont"}
         )
         return [
-            PromoSchema(url=self._promo_url + image["data-src"], title=image["title"])
+            PromoSchema(url=self._project_url + image["data-src"], title=image["title"])
             for div in divs
             if (image := div.find("img"))
         ]

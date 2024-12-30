@@ -18,6 +18,7 @@ class OrderService:
     async def get_orders(self, phone: str) -> List[OrderSchema]:
         if is_valid_phone(phone):
             phone = format_phone(phone)
+        print(phone)
         json = {
             "command": settings.api.cmd.status,
             "telefon": phone
@@ -36,4 +37,4 @@ class OrderService:
 '''import asyncio
 from src.http.response import JsonResponse
 client = HTTPClient(JsonResponse())
-print(asyncio.run(OrderService(client).get_orders("+7(982)130-13-73")))'''
+print(asyncio.run(OrderService(client).get_orders("+7(919)935-09-14")))'''

@@ -1,13 +1,15 @@
+import logging
 import asyncio
 
-from src.app.bot import start_aiogram_bot
-from src.broadcast.broadcast import start_rabbit_broadcast
+from src.app.run import run_orders_bot
+from src.orders_sender.run import run_orders_sender
 
 
 async def main() -> None:
+    logging.basicConfig(level=logging.INFO)
     await asyncio.gather(
-        start_aiogram_bot(),
-        start_rabbit_broadcast()
+        run_orders_bot(),
+        run_orders_sender()
     )
 
 

@@ -1,14 +1,17 @@
+import logging
+
 from typing import List
 
 from src.http.client import HTTPClient
 from src.http.response import JsonResponse
-
 from src.database.service.user import UserService
-
 from src.service.order import OrderService
 from src.schemas.order import OrderSchema
 
 from src.config import settings
+
+
+log = logging.getLogger(__name__)
 
 
 class OrderRepository:
@@ -20,6 +23,8 @@ class OrderRepository:
     async def get_user_orders(cls, user_id: int) -> List[OrderSchema] | None:
         user = await cls.user_service.get_user(user_id)
         orders = await cls.order_service.get_orders(user.phone)
+        log.info("Found %s orders by phone %s", len(orders), user.phone)
+        log.info(orders)
         if orders:
             return [
                 order
