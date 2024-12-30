@@ -19,6 +19,8 @@ class OrderService:
         if is_valid_phone(phone):
             phone = format_phone(phone)
         print(phone)
+        print(settings.api.cmd.status)
+        print(type(settings.api.cmd.status))
         json = {
             "command": settings.api.cmd.status,
             "telefon": phone
@@ -32,9 +34,3 @@ class OrderService:
             OrderSchema(**order)
             for order in orders["data"]["orders"]
         ]
-
-
-'''import asyncio
-from src.http.response import JsonResponse
-client = HTTPClient(JsonResponse())
-print(asyncio.run(OrderService(client).get_orders("+7(919)935-09-14")))'''

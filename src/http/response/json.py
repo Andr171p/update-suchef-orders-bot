@@ -11,6 +11,6 @@ class JsonResponse(ResponseChecker, AbstractResponse):
             self,
             response: ClientResponse
     ) -> Dict[str, Any] | None:
-        if self.is_ok(response):
+        if not self.is_ok(response):
             return
         return await response.json()
