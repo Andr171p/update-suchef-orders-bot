@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 refactoring">
-      <change afterPath="$PROJECT_DIR$/src/orders_sender/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/orders_sender/consumer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/orders_sender/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_sender/processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_sender/sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 promos update">
       <change beforePath="$PROJECT_DIR$/src/database/service/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/service/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/message/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/promos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,13 +227,22 @@
       <option name="project" value="LOCAL" />
       <updated>1735515132984</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[suchef-orders-status-bot] 30.12.2024 promos update">
+      <option name="closed" value="true" />
+      <created>1735558518699</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735558518699</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[suchef-orders-status-bot] 29.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 promos update" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 promos update" />
   </component>
 </project>
