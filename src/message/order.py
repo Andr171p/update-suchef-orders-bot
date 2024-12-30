@@ -1,6 +1,10 @@
 from pathlib import Path
 
-from aiogram.types import InlineKeyboardMarkup, InputFile
+from aiogram.types import (
+    InlineKeyboardMarkup,
+    FSInputFile,
+    InputFile
+)
 
 from src.schemas.order import OrderSchema
 from src.app.keyboards import pay_link_kb, confirmed_link_kb
@@ -37,7 +41,7 @@ class OrderMessage:
 
     def _get_photo(self) -> InputFile:
         path: Path = self.photos_dir / f"{self._order.status}.png"
-        photo = InputFile(str(path))
+        photo = FSInputFile(str(path))
         return photo
 
     def get_message(self) -> BaseMessage:

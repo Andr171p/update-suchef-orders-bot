@@ -41,7 +41,7 @@ class UserService(DBSession):
             if user:
                 await session.delete(user)
                 await session.commit()
-            return user.scalars().one()
+            return user.scalar_one_or_none()
 
     @singledispatchmethod
     async def get_user(self, arg: Any) -> User | None:
@@ -56,7 +56,7 @@ class UserService(DBSession):
             )
             user = await session.execute(stmt)
             try:
-                return user.scalars().one()
+                return user.scalar_one_or_none()
             except Exception as _ex:
                 raise _ex
 
@@ -69,7 +69,7 @@ class UserService(DBSession):
             )
             user = await session.execute(stmt)
             try:
-                return user.scalars().one()
+                return user.scalar_one_or_none()
             except Exception as _ex:
                 raise _ex
 
