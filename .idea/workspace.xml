@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response">
-      <change afterPath="$PROJECT_DIR$/src/app/keyboards/flyers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/message/abc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/message/flyers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repository/flyers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/schemas/flyers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photos/flyers/flyers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/flyers/Есть флаеры.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/flyers/Нет фишек.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/texts/flyers/Нет флаеров.txt" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix">
+      <change afterPath="$PROJECT_DIR$/src/app/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/commands/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/flyers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,37 +30,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2qrJJGEvKZRGWyfMEvrv85iF7lT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.api.executor": "Run",
-    "Python.auth.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.files.executor": "Run",
-    "Python.flyers.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.order (1).executor": "Run",
-    "Python.order (2).executor": "Run",
-    "Python.order (3).executor": "Run",
-    "Python.order_status (1).executor": "Run",
-    "Python.order_status.executor": "Run",
-    "Python.promo (1).executor": "Run",
-    "Python.promotions.executor": "Run",
-    "Python.service (1).executor": "Run",
-    "Python.service.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/OrderStatusAioBot/static/photos/flyers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.flyers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.order (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.order (3).executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_status (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python.promo (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.promotions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.service (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.service.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuRAG&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusAioBot\static\photos\flyers" />
@@ -274,7 +268,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735560930504</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers">
+      <option name="closed" value="true" />
+      <created>1735565822100</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735565822100</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix">
+      <option name="closed" value="true" />
+      <created>1735573588479</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735573588479</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -285,6 +295,8 @@
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add bs4 in reqs" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers" />
+    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix" />
   </component>
 </project>

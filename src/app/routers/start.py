@@ -20,7 +20,7 @@ async def start(message: Message) -> None:
         text = await load_json_async(settings.static.start)
         await message.answer(
             text=text['already_auth'],
-            reply_markup=menu_kb()
+            # reply_markup=menu_kb()
         )
     else:
         text = await load_json_async(settings.static.start)

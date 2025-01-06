@@ -2,6 +2,7 @@ import logging
 
 from aiogram import F, Router
 from aiogram.types import Message
+from aiogram.filters import Command
 
 from src.repository.order import order_repository
 from src.message.order import OrderMessage
@@ -16,7 +17,8 @@ log = logging.getLogger(__name__)
 order_router = Router()
 
 
-@order_router.message(F.text == "Статус заказа")
+# @order_router.message(F.text == "Статус заказа")
+@order_router.message(Command("orders"))
 async def get_order_status(message: Message) -> None:
     user_id: int = message.from_user.id
     orders = await order_repository.get_user_orders(user_id)
@@ -35,5 +37,5 @@ async def get_order_status(message: Message) -> None:
         template = await load_json_async(settings.static.exc)
         await message.answer(
             text=template["empty"],
-            reply_markup=menu_kb()
+            # reply_markup=menu_kb()
         )
