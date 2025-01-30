@@ -2,7 +2,7 @@ from src.database.crud.user import UserService
 from src.http.client import HTTPClient
 from src.http.response import JsonResponse
 from src.services.flyers import FlyersService
-from src.schemas.bonus import FlyersSchema
+from src.schemas import BonusSchema
 
 
 class FlyersRepository:
