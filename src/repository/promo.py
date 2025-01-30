@@ -1,7 +1,7 @@
 from typing import List
 
 from src.http.client import HTTPClient
-from src.http.response import TextResponse
+from src.http.responses import TextResponse
 
 from src.services.promos import PromoService
 from src.schemas.promo import PromoSchema

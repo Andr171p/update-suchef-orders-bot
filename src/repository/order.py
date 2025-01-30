@@ -3,7 +3,7 @@ import logging
 from typing import List
 
 from src.http.client import HTTPClient
-from src.http.response import JsonResponse
+from src.http.responses import JsonResponse
 from src.database.crud.user import UserService
 from src.services.order import OrderService
 from src.schemas.order import OrderSchema

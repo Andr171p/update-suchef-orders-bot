@@ -1,6 +1,6 @@
 from src.database.crud.user import UserService
 from src.http.client import HTTPClient
-from src.http.response import JsonResponse
+from src.http.responses import JsonResponse
 from src.services.flyers import FlyersService
 from src.schemas import BonusSchema
 
