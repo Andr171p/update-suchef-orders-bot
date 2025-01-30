@@ -1,12 +1,12 @@
-from src.http.client import HTTPClient
-from src.http.responses import JsonResponse
+from src.apis.base import BaseAPI
+from src.http import HTTPClient, JsonResponse
 from src.schemas import BonusSchema
 from src.apis.schemas import BonusData
 from src.misc.validators import is_valid_phone
 from src.config import settings
 
 
-class BonusAPI:
+class BonusAPI(BaseAPI):
     _url = settings.api.url
     _headers = settings.api.headers
 
