@@ -35,7 +35,7 @@ class RabbitSettings(BaseSettings):
 
 class APISettings(BaseSettings):
     url: str = os.getenv("API_URL")
-    headers: Dict[str, str] = {"Content-Type": "application/json; charset=UTF-8"}
+    headers: dict = {"Content-Type": "application/json; charset=UTF-8"}
 
     class Commands:
         status: Literal["status"] = "status"
