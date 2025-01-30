@@ -8,8 +8,8 @@ from aiogram.types import (
 
 from src.message.abc import AbstractMessage
 from src.message.base import BaseMessage
-from src.schemas.flyers import FlyersSchema
-from src.utils.files import load_txt
+from src.schemas.bonus import FlyersSchema
+from src.misc.file_loaders import load_txt
 from src.app.keyboards.flyers import flyers_kb
 
 from src.config import settings

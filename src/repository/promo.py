@@ -3,7 +3,7 @@ from typing import List
 from src.http.client import HTTPClient
 from src.http.response import TextResponse
 
-from src.service.promos import PromoService
+from src.services.promos import PromoService
 from src.schemas.promo import PromoSchema
 
 

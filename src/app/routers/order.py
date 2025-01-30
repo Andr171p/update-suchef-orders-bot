@@ -6,7 +6,7 @@ from aiogram.filters import Command
 
 from src.repository.order import order_repository
 from src.message.order import OrderMessage
-from src.utils.files import load_json_async
+from src.misc.file_loaders import load_json_async
 from src.app.keyboards.menu import menu_kb
 
 from src.config import settings

@@ -1,8 +1,8 @@
-from src.database.service.user import UserService
+from src.database.crud.user import UserService
 from src.http.client import HTTPClient
 from src.http.response import JsonResponse
-from src.service.flyers import FlyersService
-from src.schemas.flyers import FlyersSchema
+from src.services.flyers import FlyersService
+from src.schemas.bonus import FlyersSchema
 
 
 class FlyersRepository:

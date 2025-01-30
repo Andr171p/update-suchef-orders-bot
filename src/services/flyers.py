@@ -1,9 +1,9 @@
 from typing import Dict
 
 from src.http.client import HTTPClient
-from src.schemas.flyers import FlyersSchema
-from src.utils.validator import is_valid_phone
-from src.utils.format import format_phone
+from src.schemas.bonus import FlyersSchema
+from src.misc.validators import is_valid_phone
+from src.misc.formatters import format_phone
 
 from src.config import settings
 

@@ -12,7 +12,7 @@ ENV_PATH: Path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=ENV_PATH)
 
 
-class PostgresSettings(BaseSettings):
+class DatabaseSettings(BaseSettings):
     user: str = os.getenv("DB_USER")
     password: str = os.getenv("DB_PASSWORD")
     host: str = os.getenv("DB_HOST")
@@ -70,7 +70,7 @@ class ProjectSettings(BaseSettings):
 
 class Settings(BaseSettings):
     bot: BotSettings = BotSettings()
-    pg: PostgresSettings = PostgresSettings()
+    db: DatabaseSettings = DatabaseSettings()
     static: StaticSettings = StaticSettings()
     rabbit: RabbitSettings = RabbitSettings()
     api: APISettings = APISettings()

@@ -11,7 +11,7 @@ from src.app.keyboards import pay_link_kb, confirmed_link_kb
 
 from src.message.base import BaseMessage
 
-from src.utils.files import load_txt
+from src.misc.file_loaders import load_txt
 from src.config import settings
 
 

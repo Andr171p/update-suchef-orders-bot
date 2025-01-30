@@ -1,7 +1,5 @@
 import re
 
-from typing import List
-
 
 def format_phone(phone: str) -> str:
     digits = re.sub(
@@ -25,10 +23,10 @@ def format_time(time: str) -> str:
 
 
 def format_date(date: str) -> str:
-    parts: List[str] = date.split('T')[0].split('-')
+    parts = date.split('T')[0].split('-')
     return '.'.join(reversed(parts))
 
 
 def format_address(address: str) -> str:
-    parts: List[str] = address.split(',')[3:]
+    parts = address.split(',')[3:]
     return ''.join(parts)

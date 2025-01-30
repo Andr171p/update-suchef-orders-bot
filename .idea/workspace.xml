@@ -4,16 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix">
-      <change afterPath="$PROJECT_DIR$/src/app/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/commands/menu.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 06.01.2025 commands menu">
+      <change afterPath="$PROJECT_DIR$/src/database/interfaces/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/interfaces/crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/models/dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/models/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/provider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/versions/2024_12_18_2034-a964e4ba43d3_initial_revision.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/commands/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/register.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/context.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lifespan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/service/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/promo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/promo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/bonus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/promos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/files.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/file_loaders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/format.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/formatters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,28 +77,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.files.executor&quot;: &quot;Run&quot;,
-    &quot;Python.flyers.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
-    &quot;Python.promo (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.promotions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.service (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuRAG&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.files.executor": "Run",
+    "Python.flyers.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order (1).executor": "Run",
+    "Python.order (2).executor": "Run",
+    "Python.order (3).executor": "Run",
+    "Python.order_status (1).executor": "Run",
+    "Python.order_status.executor": "Run",
+    "Python.promo (1).executor": "Run",
+    "Python.promotions.executor": "Run",
+    "Python.service (1).executor": "Run",
+    "Python.service.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/andre/TyuiuRAG"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusAioBot\static\photos\flyers" />
@@ -284,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735573588479</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[suchef-orders-status-bot] 06.01.2025 commands menu">
+      <option name="closed" value="true" />
+      <created>1736152230273</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736152230273</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -297,6 +343,7 @@
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix" />
+    <MESSAGE value="[suchef-orders-status-bot] 06.01.2025 commands menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 06.01.2025 commands menu" />
   </component>
 </project>

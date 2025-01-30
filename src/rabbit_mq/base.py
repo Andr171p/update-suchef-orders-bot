@@ -1,10 +1,10 @@
+from typing import Optional
+
 import aio_pika
 from aio_pika.abc import (
     AbstractRobustConnection,
     AbstractRobustChannel
 )
-
-from typing import Optional
 
 from src.rabbit_mq.exc import RabbitException
 from src.config import settings

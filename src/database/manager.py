@@ -8,17 +8,17 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine
 )
 
-from src.config import settings
+from src.database.base import get_database_url
 
 
-class DBSession:
+class DatabaseManager:
     def __init__(self) -> None:
         self._engine: Optional[AsyncEngine] = None
         self._sessionmaker: Optional[async_sessionmaker[AsyncSession]] = None
 
     def init(self) -> None:
         self._engine = create_async_engine(
-            url=settings.pg.url,
+            url=get_database_url(),
             echo=True
         )
         self._sessionmaker = async_sessionmaker(
@@ -45,18 +45,10 @@ class DBSession:
     @contextlib.asynccontextmanager
     async def connect(self) -> AsyncIterator[AsyncConnection]:
         if self._engine is None:
-            raise IOError("DBSession is not initialized")
+            raise IOError("DatabaseManager is not initialized")
         async with self._engine.begin() as connection:
             try:
                 yield connection
             except Exception as _ex:
                 await connection.rollback()
                 raise _ex
-
-
-db_session: DBSession = DBSession()
-
-
-async def get_session() -> AsyncSession:
-    async with db_session.session() as session:
-        yield session
