@@ -14,7 +14,7 @@ class OrdersService:
     _orders_api = OrdersAPI()
     _user_repository = UserRepository()
 
-    async def get_message_by_user_id(self, user_id: int) -> AsyncGenerator[OrderMessage, Any]:
+    async def get_messages_by_user_id(self, user_id: int) -> AsyncGenerator[OrderMessage, Any] | None:
         user = await self._user_repository.get_by_user_id(user_id)
         phone: str = user.phone
         orders = await self._orders_api.get_orders_by_phone(phone)

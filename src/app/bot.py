@@ -9,9 +9,9 @@ from src.app.container import container
 from src.app.routers import (
     start_router,
     register_router,
-    order_router,
+    orders_router,
     promos_router,
-    flyers_router
+    bonus_router
 )
 from src.config import settings
 
@@ -27,9 +27,9 @@ dp: Dispatcher = Dispatcher(
 dp.include_routers(
     start_router,
     register_router,
-    order_router,
+    orders_router,
     promos_router,
-    flyers_router
+    bonus_router
 )
 
 setup_dishka(
