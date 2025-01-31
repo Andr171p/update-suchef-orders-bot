@@ -3,13 +3,13 @@ from aiogram.types import Message
 from aiogram.filters import Command
 
 from src.repository.flyers import flyers_repository
-from src.message.bonus import FlyersMessage
+from src.messages.bonus import FlyersMessage
 
 
 flyers_router = Router()
 
 
-# @flyers_router.message(F.text == "Мои фишки")
+# @flyers_router.messages(F.text == "Мои фишки")
 @flyers_router.message(Command("flyers"))
 async def get_flyers(message: Message) -> None:
     user_id: int = message.from_user.id

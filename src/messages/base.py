@@ -16,5 +16,5 @@ class BaseMessage(ABC):
 
     @property
     @abstractmethod
-    def photo(self) -> InputFile:
+    def photo(self) -> InputFile | str:
         raise NotImplemented

@@ -5,7 +5,7 @@ from aiogram.types import Message
 from aiogram.filters import Command
 
 from src.repository.order import order_repository
-from src.message.order import OrderMessage
+from src.messages.order import OrderMessage
 from src.misc.file_loaders import load_json_async
 from src.app.keyboards.menu import menu_kb
 
@@ -17,7 +17,7 @@ log = logging.getLogger(__name__)
 order_router = Router()
 
 
-# @order_router.message(F.text == "Статус заказа")
+# @order_router.messages(F.text == "Статус заказа")
 @order_router.message(Command("orders"))
 async def get_order_status(message: Message) -> None:
     user_id: int = message.from_user.id

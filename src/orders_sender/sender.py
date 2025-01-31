@@ -3,7 +3,7 @@ import logging
 from aiogram import Bot
 
 from src.schemas.order import OrderSchema
-from src.message.order import OrderMessage
+from src.messages.order import OrderMessage
 from src.repository.user import user_repository
 
 

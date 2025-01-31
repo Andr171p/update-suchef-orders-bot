@@ -3,7 +3,7 @@ from typing import AsyncGenerator, Any
 
 from src.apis import OrdersAPI
 from src.repository import UserRepository
-from src.message import BaseMessage, OrderMessage
+from src.messages import BaseMessage, OrderMessage
 
 
 log = logging.getLogger(__name__)

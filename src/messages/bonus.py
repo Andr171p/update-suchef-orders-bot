@@ -6,7 +6,7 @@ from aiogram.types import (
     InputFile
 )
 
-from src.message.base import BaseMessage
+from src.messages.base import BaseMessage
 from src.schemas import BonusSchema
 from src.misc.file_loaders import load_txt
 from src.app.keyboards.flyers import flyers_kb

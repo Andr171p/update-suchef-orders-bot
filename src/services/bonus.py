@@ -2,7 +2,7 @@ import logging
 
 from src.apis import BonusAPI
 from src.repository import UserRepository
-from src.message import BaseMessage, BonusMessage
+from src.messages import BaseMessage, BonusMessage
 
 
 log = logging.getLogger(__name__)

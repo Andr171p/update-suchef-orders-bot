@@ -6,7 +6,7 @@ from aiogram.types import (
     InputFile
 )
 
-from src.message.base import BaseMessage
+from src.messages.base import BaseMessage
 from src.schemas.order import OrderSchema
 from src.app.keyboards import pay_link_kb, confirmed_link_kb
 from src.misc.file_loaders import load_txt

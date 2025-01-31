@@ -19,6 +19,6 @@ class OrdersProcessor:
         body: str = self.message.body.decode()
         headers: Dict[str, str] = self.message.headers
         if headers["project"] == settings.project.name:
-            log.info("[x] Received message: %s", body)
+            log.info("[x] Received messages: %s", body)
             order = OrderSchema.parse_raw(body)
             return order
