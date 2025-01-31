@@ -3,7 +3,7 @@ from aiogram.types import Message
 from aiogram.filters import Command
 
 from src.repository.flyers import flyers_repository
-from src.message.flyers import FlyersMessage
+from src.message.bonus import FlyersMessage
 
 
 flyers_router = Router()

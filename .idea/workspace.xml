@@ -4,12 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 update http module">
-      <change afterPath="$PROJECT_DIR$/src/apis/promo_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/apis/schemas.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 add order and promo api service">
+      <change afterPath="$PROJECT_DIR$/src/services/bonus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/bonus_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/bonus_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apis/order_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/orders_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/abc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/abc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/bonus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/flyers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/promo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/flyers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/promos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +61,11 @@
     "Python.order (1).executor": "Run",
     "Python.order (2).executor": "Run",
     "Python.order (3).executor": "Run",
+    "Python.order_api.executor": "Run",
     "Python.order_status (1).executor": "Run",
     "Python.order_status.executor": "Run",
     "Python.promo (1).executor": "Run",
+    "Python.promo_api.executor": "Run",
     "Python.promotions.executor": "Run",
     "Python.service (1).executor": "Run",
     "Python.service.executor": "Run",
@@ -74,7 +89,7 @@
       <recent name="C:\Users\andre\OrderStatusAioBot" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.bonus_api">
+  <component name="RunManager" selected="Python.orders_api">
     <configuration name="bonus_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
@@ -119,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="flyers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="orders_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,11 +143,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/apis" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/flyers.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\OrderStatusAioBot\src\apis\orders_api.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,7 +156,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="order (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="promo_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,11 +165,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/apis" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/order.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/apis/promo_api.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.orders_api" />
+        <item itemvalue="Python.promo_api" />
         <item itemvalue="Python.bonus_api" />
         <item itemvalue="Python.validators" />
         <item itemvalue="Python.client" />
-        <item itemvalue="Python.flyers" />
-        <item itemvalue="Python.order (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +330,39 @@
       <option name="project" value="LOCAL" />
       <updated>1738275217871</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[suchef-orders-status-bot] dev: 31.01.2025 update bonus api">
+      <option name="closed" value="true" />
+      <created>1738277895888</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738277895889</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[suchef-orders-status-bot] dev: 31.01.2025 create base api">
+      <option name="closed" value="true" />
+      <created>1738278074225</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738278074225</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[suchef-orders-status-bot] dev: 31.01.2025 init migration">
+      <option name="closed" value="true" />
+      <created>1738278192161</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738278192161</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[suchef-orders-status-bot] dev: 31.01.2025 add order and promo api service">
+      <option name="closed" value="true" />
+      <created>1738283490875</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738283490875</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -332,6 +379,10 @@
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add dialog repository" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 update http module" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 update http module" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 update bonus api" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 create base api" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 init migration" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add order and promo api service" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 add order and promo api service" />
   </component>
 </project>

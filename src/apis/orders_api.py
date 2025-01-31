@@ -7,7 +7,7 @@ from src.http import HTTPClient, JsonResponse
 from src.config import settings
 
 
-class OrderAPI(BaseAPI):
+class OrdersAPI(BaseAPI):
     _url = settings.api.url
     _headers = settings.api.headers
 

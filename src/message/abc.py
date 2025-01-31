@@ -5,10 +5,13 @@ from aiogram.types import InlineKeyboardMarkup, InputFile
 
 class AbstractMessage(ABC):
     @abstractmethod
-    def _get_keyboard(self) -> InlineKeyboardMarkup: pass
+    def _get_keyboard(self) -> InlineKeyboardMarkup:
+        raise NotImplemented
 
     @abstractmethod
-    def _get_text(self) -> str: pass
+    def _get_text(self) -> str:
+        raise NotImplemented
 
     @abstractmethod
-    def _get_photo(self) -> InputFile: pass
+    def _get_photo(self) -> InputFile:
+        raise NotImplemented

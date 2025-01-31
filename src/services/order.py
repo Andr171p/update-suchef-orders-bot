@@ -1,33 +1,29 @@
-from typing import List, Dict
+import logging
+from typing import AsyncGenerator, Any
 
-from src.http.client import HTTPClient
-from src.schemas.order import OrderSchema
-from src.misc.validators import is_valid_phone
-from src.misc.formatters import format_phone
-
-from src.config import settings
+from src.apis import OrdersAPI
+from src.repository import UserRepository
+from src.message import BaseMessage, OrderMessage
 
 
-class OrderService:
-    _url: str = settings.api.url
-    _headers: Dict[str, str] = settings.api.headers
+log = logging.getLogger(__name__)
 
-    def __init__(self, http_client: HTTPClient) -> None:
-        self._http_client = http_client
 
-    async def get_orders(self, phone: str) -> List[OrderSchema]:
-        if is_valid_phone(phone):
-            phone = format_phone(phone)
-        json = {
-            "command": settings.api.cmd.status,
-            "telefon": phone
-        }
-        orders = await self._http_client.post(
-            url=self._url,
-            json=json,
-            headers=self._headers
+class OrdersService:
+    _orders_api = OrdersAPI()
+    _user_repository = UserRepository()
+
+    async def get_message_by_user_id(self, user_id: int) -> AsyncGenerator[BaseMessage, Any]:
+        user = await self._user_repository.get_by_user_id(user_id)
+        phone: str = user.phone
+        orders = await self._orders_api.get_orders_by_phone(phone)
+        log.info(
+            "Found %s orders from %s user",
+            len(orders),
+            user_id
         )
-        return [
-            OrderSchema(**order)
-            for order in orders["data"]["orders"]
-        ]
+        if not orders:
+            return
+        for order in orders:
+            order_message = OrderMessage(order).get_message()
+            yield order_message

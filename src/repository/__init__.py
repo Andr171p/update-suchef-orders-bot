@@ -1,5 +1,7 @@
 __all__ = (
-    "UserRepository"
+    "UserRepository",
+    "DialogRepository"
 )
 
 from src.repository.user import UserRepository
+from src.repository.dialog import DialogRepository

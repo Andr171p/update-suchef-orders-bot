@@ -8,12 +8,12 @@ log = logging.getLogger(__name__)
 
 
 class UserService:
-    _repository = UserRepository()
+    _user_repository = UserRepository()
 
     async def register(self, user: UserSchema) -> None:
-        register_user = await self._repository.add(user)
+        register_user = await self._user_repository.add(user)
         log.info("Successfully register %s", register_user)
 
     async def verify(self, user_id: int) -> bool:
-        user = await self._repository.get_by_user_id(user_id)
+        user = await self._user_repository.get_by_user_id(user_id)
         return True if user is not None else False
