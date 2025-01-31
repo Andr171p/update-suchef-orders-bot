@@ -24,5 +24,4 @@ class BonusService:
             bonus.flyers,
             user_id
         )
-        bonus_message = BonusMessage(bonus).get_message()
-        return bonus_message
+        return BonusMessage(bonus)

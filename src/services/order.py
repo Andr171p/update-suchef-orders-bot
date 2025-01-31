@@ -25,5 +25,4 @@ class OrdersService:
         if not orders:
             return
         for order in orders:
-            order_message = OrderMessage(order).get_message()
-            yield order_message
+            yield OrderMessage(order)

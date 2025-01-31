@@ -1,13 +1,20 @@
-from pydantic import BaseModel
+from abc import ABC, abstractmethod
 
-from aiogram.types import InputFile
-from aiogram.types.base import MutableTelegramObject
+from aiogram.types import InlineKeyboardMarkup, InputFile
 
 
-class BaseMessage(BaseModel):
-    photo: InputFile | None
-    text: str
-    keyboard: MutableTelegramObject | None
+class BaseMessage(ABC):
+    @property
+    @abstractmethod
+    def keyboard(self) -> InlineKeyboardMarkup:
+        raise NotImplemented
 
-    class Config:
-        arbitrary_types_allowed = True
+    @property
+    @abstractmethod
+    def text(self) -> str:
+        raise NotImplemented
+
+    @property
+    @abstractmethod
+    def photo(self) -> InputFile:
+        raise NotImplemented
