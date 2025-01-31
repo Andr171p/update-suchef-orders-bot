@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from typing import Dict, Literal
+from typing import Literal
 from pydantic_settings import BaseSettings
 
 

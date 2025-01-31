@@ -26,3 +26,7 @@ class PromoService:
             for div in divs
             if (image := div.find("img"))
         ]
+
+
+import asyncio
+print(asyncio.run(PromoService().get_promos()))
