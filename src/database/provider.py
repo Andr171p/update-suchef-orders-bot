@@ -4,7 +4,7 @@ from src.database.manager import DatabaseManager
 
 
 class DatabaseManagerSingleton:
-    _instance: Optional["DatabaseManager"]
+    _instance: Optional[DatabaseManager] = None
 
     def __new__(cls) -> DatabaseManager:
         if cls._instance is None:

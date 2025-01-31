@@ -6,7 +6,7 @@ from src.utils.notification import notify_users_with_orders_messages
 
 
 async def main() -> None:
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(message)s')
     await asyncio.gather(
         run_bot(),
         notify_users_with_orders_messages()

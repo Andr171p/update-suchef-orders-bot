@@ -13,6 +13,22 @@ class DialogRepository(BaseRepository):
         added_dialog = await self._crud.create(Dialog(**dialog.model_dump()))
         return DialogSchema(**added_dialog.__dict__)
 
+    async def get_by_user_id(self, user_id: int) -> List[DialogSchema] | None:
+        dialogs = await self._crud.read_by_user_id(user_id)
+        if dialogs is None:
+            return
+        return [DialogSchema(**dialog.__dict__) for dialog in dialogs]
+
     async def get_all(self) -> List[DialogSchema]:
         dialogs = await self._crud.read_all()
         return [DialogSchema(**dialog.__dict__) for dialog in dialogs]
+
+
+import asyncio
+async def main() -> None:
+    repo = DialogRepository()
+    dialogs = await repo.get_by_user_id(123)
+    print(dialogs)
+
+
+asyncio.run(main())

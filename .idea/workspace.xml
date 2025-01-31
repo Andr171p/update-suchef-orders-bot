@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 new migration">
-      <change afterPath="$PROJECT_DIR$/src/services/chat.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/chat_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/chat_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/crud/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/provider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/dialog.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,34 +35,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bonus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bonus_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.client.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.files.executor&quot;: &quot;Run&quot;,
-    &quot;Python.flyers.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
-    &quot;Python.promo (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.promo_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.promotions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.service (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.validators.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuRAG&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.bonus.executor": "Run",
+    "Python.bonus_api.executor": "Run",
+    "Python.client.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.dialog.executor": "Run",
+    "Python.files.executor": "Run",
+    "Python.flyers.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order (1).executor": "Run",
+    "Python.order (2).executor": "Run",
+    "Python.order (3).executor": "Run",
+    "Python.order_api.executor": "Run",
+    "Python.order_status (1).executor": "Run",
+    "Python.order_status.executor": "Run",
+    "Python.promo (1).executor": "Run",
+    "Python.promo_api.executor": "Run",
+    "Python.promotions.executor": "Run",
+    "Python.service (1).executor": "Run",
+    "Python.service.executor": "Run",
+    "Python.validators.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/andre/TyuiuRAG"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusAioBot\static\photos\flyers" />
@@ -77,7 +78,7 @@
       <recent name="C:\Users\andre\OrderStatusAioBot\src\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.bonus">
+  <component name="RunManager" selected="Python.dialog">
     <configuration name="bonus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
@@ -114,6 +115,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/apis/bonus_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dialog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/repository/dialog.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,35 +189,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="validators" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/misc" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/misc/validators.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dialog" />
         <item itemvalue="Python.bonus" />
         <item itemvalue="Python.orders_api" />
         <item itemvalue="Python.promo_api" />
         <item itemvalue="Python.bonus_api" />
-        <item itemvalue="Python.validators" />
       </list>
     </recent_temporary>
   </component>
@@ -406,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738334598994</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method">
+      <option name="closed" value="true" />
+      <created>1738338469895</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1738338469896</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -434,6 +443,7 @@
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add DIP to bot" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 routing" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 new migration" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method" />
   </component>
 </project>
