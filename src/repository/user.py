@@ -24,3 +24,9 @@ class UserRepository(BaseRepository):
         if user is None:
             return
         return UserSchema(**user.__dict__)
+
+    async def get_by_phone(self, phone: str) -> UserSchema | None:
+        user = await self._crud.read_by_phone(phone)
+        if user is None:
+            return
+        return UserSchema(**user.__dict__)

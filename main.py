@@ -2,7 +2,7 @@ import logging
 import asyncio
 
 from src.app.run import run_orders_bot
-from src.orders_sender.run import run_orders_sender
+from src.notification.run import run_orders_sender
 
 
 async def main() -> None:

@@ -9,7 +9,7 @@ from aiogram.types import (
 from src.messages.base import BaseMessage
 from src.schemas import BonusSchema
 from src.misc.file_loaders import load_txt
-from src.app.keyboards.flyers import flyers_kb
+from src.app.keyboards.bonus import bonus_kb
 from src.config import settings
 
 
@@ -22,7 +22,7 @@ class BonusMessage(BaseMessage):
 
     @property
     def keyboard(self) -> InlineKeyboardMarkup:
-        return flyers_kb()
+        return bonus_kb()
 
     @property
     def text(self) -> str:
@@ -38,15 +38,3 @@ class BonusMessage(BaseMessage):
         path: Path = self.photos_dir / "flyers.png"
         photo = FSInputFile(str(path))
         return photo
-
-
-async def main() -> None:
-    from src.apis import BonusAPI
-    bonus_api = BonusAPI()
-    bonus = await bonus_api.get_by_phone("89199350914")
-    message = BonusMessage(bonus)
-    print(message.text)
-
-
-import asyncio
-asyncio.run(main())

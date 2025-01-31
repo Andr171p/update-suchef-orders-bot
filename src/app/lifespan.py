@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-
 from contextlib import asynccontextmanager
 from contextlib import AbstractAsyncContextManager
+
+from fastapi import FastAPI
 
 
 @asynccontextmanager

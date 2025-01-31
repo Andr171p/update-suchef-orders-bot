@@ -6,7 +6,7 @@ from aiogram.types import InlineKeyboardMarkup
 from src.config import settings
 
 
-def flyers_kb() -> InlineKeyboardMarkup:
+def bonus_kb() -> InlineKeyboardMarkup:
     keyboard_list: List[List[InlineKeyboardButton]] = [
         [InlineKeyboardButton(text="Перейти на сайт", url=settings.project.url)]
     ]
