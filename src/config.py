@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from typing import Dict, Literal
+from typing import Literal
 from pydantic_settings import BaseSettings
 
 
@@ -12,7 +12,7 @@ ENV_PATH: Path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=ENV_PATH)
 
 
-class PostgresSettings(BaseSettings):
+class DatabaseSettings(BaseSettings):
     user: str = os.getenv("DB_USER")
     password: str = os.getenv("DB_PASSWORD")
     host: str = os.getenv("DB_HOST")
@@ -35,7 +35,7 @@ class RabbitSettings(BaseSettings):
 
 class APISettings(BaseSettings):
     url: str = os.getenv("API_URL")
-    headers: Dict[str, str] = {"Content-Type": "application/json; charset=UTF-8"}
+    headers: dict = {"Content-Type": "application/json; charset=UTF-8"}
 
     class Commands:
         status: Literal["status"] = "status"
@@ -70,7 +70,7 @@ class ProjectSettings(BaseSettings):
 
 class Settings(BaseSettings):
     bot: BotSettings = BotSettings()
-    pg: PostgresSettings = PostgresSettings()
+    db: DatabaseSettings = DatabaseSettings()
     static: StaticSettings = StaticSettings()
     rabbit: RabbitSettings = RabbitSettings()
     api: APISettings = APISettings()

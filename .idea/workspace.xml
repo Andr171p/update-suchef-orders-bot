@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix">
-      <change afterPath="$PROJECT_DIR$/src/app/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/commands/menu.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="16.03.2025 add ai agent">
+      <change afterPath="$PROJECT_DIR$/prompts/order_status_prompt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/crud/base_crud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migration/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/base_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/crud/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/crud/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/interfaces/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/interfaces/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/dialog_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user_relation_mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/provider.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,28 +44,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.files.executor&quot;: &quot;Run&quot;,
-    &quot;Python.flyers.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
-    &quot;Python.promo (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.promotions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.service (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuRAG&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.bonus.executor": "Run",
+    "Python.bonus_api.executor": "Run",
+    "Python.checker_node.executor": "Run",
+    "Python.client.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.dialog.executor": "Run",
+    "Python.files.executor": "Run",
+    "Python.flyers.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order (1).executor": "Run",
+    "Python.order (2).executor": "Run",
+    "Python.order (3).executor": "Run",
+    "Python.order_api.executor": "Run",
+    "Python.order_status (1).executor": "Run",
+    "Python.order_status.executor": "Run",
+    "Python.promo (1).executor": "Run",
+    "Python.promo_api.executor": "Run",
+    "Python.promotions.executor": "Run",
+    "Python.service (1).executor": "Run",
+    "Python.service.executor": "Run",
+    "Python.user.executor": "Run",
+    "Python.validators.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/andre/TyuiuRAG",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusAioBot\static\photos\flyers" />
@@ -68,103 +83,15 @@
       <recent name="C:\Users\andre\OrderStatusAioBot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\database\models" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\services" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\http\responses" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\service" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src" />
-      <recent name="C:\Users\andre\OrderStatusAioBot\src\database" />
-      <recent name="C:\Users\andre\OrderStatusAioBot" />
-      <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.flyers">
-    <configuration name="flyers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/flyers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="order (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/order.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="order (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusAioBot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/repository/order.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="order (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.user">
+    <configuration name="bonus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -177,7 +104,95 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/message/order.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/message/bonus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="checker_node" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ai_agent/nodes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ai_agent/nodes/checker_node.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dialog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/repository/dialog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="orders_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/apis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\OrderStatusAioBot\src\apis\orders_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusAioBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/crud" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/crud/user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.flyers" />
-        <item itemvalue="Python.order (1)" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.order (3)" />
-        <item itemvalue="Python.order (2)" />
+        <item itemvalue="Python.user" />
+        <item itemvalue="Python.checker_node" />
+        <item itemvalue="Python.dialog" />
+        <item itemvalue="Python.bonus" />
+        <item itemvalue="Python.orders_api" />
       </list>
     </recent_temporary>
   </component>
@@ -284,12 +299,154 @@
       <option name="project" value="LOCAL" />
       <updated>1735573588479</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[suchef-orders-status-bot] 06.01.2025 commands menu">
+      <option name="closed" value="true" />
+      <created>1736152230273</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736152230273</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[suchef-orders-status-bot] dev: 31.01.2025">
+      <option name="closed" value="true" />
+      <created>1738269799540</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738269799540</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[suchef-orders-status-bot] dev: 31.01.2025 add dialog repository">
+      <option name="closed" value="true" />
+      <created>1738271060669</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738271060669</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[suchef-orders-status-bot] dev: 31.01.2025 update http module">
+      <option name="closed" value="true" />
+      <created>1738275217871</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738275217871</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[suchef-orders-status-bot] dev: 31.01.2025 update bonus api">
+      <option name="closed" value="true" />
+      <created>1738277895888</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738277895889</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[suchef-orders-status-bot] dev: 31.01.2025 create base api">
+      <option name="closed" value="true" />
+      <created>1738278074225</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738278074225</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[suchef-orders-status-bot] dev: 31.01.2025 init migration">
+      <option name="closed" value="true" />
+      <created>1738278192161</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738278192161</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[suchef-orders-status-bot] dev: 31.01.2025 add order and promo api service">
+      <option name="closed" value="true" />
+      <created>1738283490875</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738283490875</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[suchef-orders-status-bot] dev: 31.01.2025 update services">
+      <option name="closed" value="true" />
+      <created>1738287459256</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738287459256</updated>
+    </task>
+    <task id="LOCAL-00019" summary="[suchef-orders-status-bot] dev: 31.01.2025 new interface for message abstraction">
+      <option name="closed" value="true" />
+      <created>1738324016868</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1738324016868</updated>
+    </task>
+    <task id="LOCAL-00020" summary="[suchef-orders-status-bot] dev: 31.01.2025 add promo messages">
+      <option name="closed" value="true" />
+      <created>1738324737913</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1738324737913</updated>
+    </task>
+    <task id="LOCAL-00021" summary="[suchef-orders-status-bot] dev: 31.01.2025 create promo factory service">
+      <option name="closed" value="true" />
+      <created>1738325476546</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1738325476546</updated>
+    </task>
+    <task id="LOCAL-00022" summary="[suchef-orders-status-bot] dev: 31.01.2025 add DIP to bot">
+      <option name="closed" value="true" />
+      <created>1738333001783</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1738333001783</updated>
+    </task>
+    <task id="LOCAL-00023" summary="[suchef-orders-status-bot] dev: 31.01.2025 routing">
+      <option name="closed" value="true" />
+      <created>1738334575612</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1738334575612</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[suchef-orders-status-bot] dev: 31.01.2025 new migration">
+      <option name="closed" value="true" />
+      <created>1738334598994</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1738334598994</updated>
+    </task>
+    <task id="LOCAL-00025" summary="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method">
+      <option name="closed" value="true" />
+      <created>1738338469895</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1738338469896</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method">
+      <option name="closed" value="true" />
+      <created>1738339210109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1738339210109</updated>
+    </task>
+    <task id="LOCAL-00027" summary="16.03.2025 add ai agent">
+      <option name="closed" value="true" />
+      <created>1742066845577</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1742066845577</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[suchef-orders-status-bot] 29.12.2024" />
-    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 promos update" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2" />
@@ -297,6 +454,24 @@
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 refactor json response" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix" />
+    <MESSAGE value="[suchef-orders-status-bot] 06.01.2025 commands menu" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add dialog repository" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 update http module" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 update bonus api" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 create base api" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 init migration" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add order and promo api service" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 update services" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new interface for message abstraction" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add promo messages" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 create promo factory service" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 add DIP to bot" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 routing" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new migration" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method" />
+    <MESSAGE value="16.03.2025 add ai agent" />
+    <option name="LAST_COMMIT_MESSAGE" value="16.03.2025 add ai agent" />
   </component>
 </project>

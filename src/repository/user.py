@@ -1,42 +1,32 @@
-import logging
+from typing import List
 
-from typing import Optional
-
-from src.database.models.user import User
-from src.database.service.user import UserService
-
+from src.repository.base import BaseRepository
+from src.database.models import User
+from src.database.crud import UserCRUD
 from src.schemas.user import UserSchema
 
 
-log = logging.getLogger(__name__)
+class UserRepository(BaseRepository):
+    _crud = UserCRUD()
 
+    async def add(self, user: UserSchema) -> UserSchema:
+        added_user = await self._crud.create(User(**user.model_dump()))
+        return UserSchema(**added_user.__dict__)
 
-class UserRepository:
-    user_service: UserService = UserService()
+    async def get_all(self) -> List[UserSchema] | None:
+        users = await self._crud.read_all()
+        if users is None:
+            return
+        return [UserSchema(**user.__dict__) for user in users]
 
-    @classmethod
-    async def add_user(
-            cls,
-            user_id: int,
-            username: Optional[str],
-            phone: str
-    ) -> User:
-        user = UserSchema(**locals())
-        registered_user = await cls.user_service.add_user(User(**user.__dict__))
-        log.info("User %s register successfully", user_id)
-        return registered_user
+    async def get_by_user_id(self, user_id: int) -> UserSchema | None:
+        user = await self._crud.read_by_user_id(user_id)
+        if user is None:
+            return
+        return UserSchema(**user.__dict__)
 
-    @classmethod
-    async def get_user(cls, user_id: int) -> User:
-        user = await cls.user_service.get_user(user_id)
-        log.info("Found user %s", user)
-        return user
-
-    @classmethod
-    async def check_user_exists(cls, user_id: int) -> bool:
-        user = await cls.user_service.get_user(user_id)
-        log.info("Found user %s", user)
-        return True if user is not None else False
-
-
-user_repository = UserRepository()
+    async def get_by_phone(self, phone: str) -> UserSchema | None:
+        user = await self._crud.read_by_phone(phone)
+        if user is None:
+            return
+        return UserSchema(**user.__dict__)
