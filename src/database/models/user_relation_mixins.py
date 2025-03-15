@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from src.database.models.user import User
+    from src.database.models.user_model import UserModel
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import (
@@ -26,8 +26,8 @@ class UserRelationMixin:
         )
 
     @declared_attr
-    def user(cls) -> Mapped["User"]:
+    def user(cls) -> Mapped["UserModel"]:
         return relationship(
-            argument="User",
+            argument="UserModel",
             back_populates=cls._user_back_populates
         )

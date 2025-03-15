@@ -1,65 +1,62 @@
-from typing import TYPE_CHECKING, Sequence
+from typing import TYPE_CHECKING, Sequence, Union
 
 if TYPE_CHECKING:
-    from src.database.manager import DatabaseManager
+    from src.database.database_manager import DatabaseManager
 
 from sqlalchemy import select
 
-from src.database.interfaces import BaseCRUD
-from src.database.provider import get_database_manager
-from src.database.models import User
+from src.database.crud.base_crud import BaseCRUD
+from src.database.models import UserModel
 
 
 class UserCRUD(BaseCRUD):
-    def __init__(
-            self,
-            manager: "DatabaseManager" = get_database_manager()
-    ) -> None:
+    def __init__(self, manager: "DatabaseManager") -> None:
         self._manager = manager
 
-    async def create(self, user: User) -> User | None:
+    async def create(self, user: UserModel) -> int:
         async with self._manager.session() as session:
             session.add(user)
+            id = user.id
             await session.commit()
             await session.refresh(user)
-        return user
+        return id
 
-    async def read_by_user_id(self, user_id: int) -> User | None:
+    async def read_by_user_id(self, user_id: int) -> Union[UserModel, None]:
         async with self._manager.session() as session:
             stmt = (
-                select(User)
-                .where(User.user_id == user_id)
+                select(UserModel)
+                .where(UserModel.user_id == user_id)
             )
             user = await session.execute(stmt)
         return user.scalar_one_or_none()
 
-    async def read_by_phone(self, phone: str) -> User | None:
+    async def read_by_phone_number(self, phone_number: str) -> Union[UserModel, None]:
         async with self._manager.session() as session:
             stmt = (
-                select(User)
-                .where(User.phone == phone)
+                select(UserModel)
+                .where(UserModel.phone_number == phone_number)
             )
             user = await session.execute(stmt)
         return user.scalar_one_or_none()
 
-    async def read_all(self) -> Sequence[User]:
+    async def read_all(self) -> Union[Sequence[UserModel], None]:
         async with self._manager.session() as session:
-            stmt = select(User)
+            stmt = select(UserModel)
             users = await session.execute(stmt)
         return users.scalars().all()
 
-    async def update(self, user: User) -> User | None:
+    async def update(self, user: UserModel) -> UserModel:
         async with self._manager.session() as session:
             await session.merge(user)
             await session.commit()
             await session.refresh(user)
         return user
 
-    async def delete(self, user_id: int) -> User | None:
+    async def delete(self, user_id: int) -> Union[UserModel, None]:
         async with self._manager.session() as session:
             stmt = (
-                select(User)
-                .where(User.user_id == user_id)
+                select(UserModel)
+                .where(UserModel.user_id == user_id)
             )
             user = await session.execute(stmt)
             if user:
@@ -72,7 +69,7 @@ import asyncio
 import csv
 
 
-def save_users_to_csv(users: list[User]) -> None:
+def save_users_to_csv(users: list[UserModel]) -> None:
     with open("users.csv", mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
 

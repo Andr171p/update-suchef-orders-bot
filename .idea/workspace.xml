@@ -4,52 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method">
-      <change afterPath="$PROJECT_DIR$/prompts/checker_prompt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/base_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/checker_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/generation_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/order_status_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/retriever_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/rewriter_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/states/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/states/graph_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ai_agent/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/entities/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/entities/bonus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/entities/dialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/entities/order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/entities/promo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/entities/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/chatbot_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/order_status_notification_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/promos_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/use_cases/users_use_case.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="16.03.2025 add ai agent">
+      <change afterPath="$PROJECT_DIR$/prompts/order_status_prompt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/crud/base_crud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migration/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/base_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/crud/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/dialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/crud/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/base_http.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/http_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/http_requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/responses/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/responses/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/base_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/responses/json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/json_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/responses/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/text_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_consumer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_exchange.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/interfaces/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/interfaces/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/dialog_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user_relation_mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/provider.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,11 +83,11 @@
       <recent name="C:\Users\andre\OrderStatusAioBot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\database\models" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\services" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\http\responses" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\service" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src" />
-      <recent name="C:\Users\andre\OrderStatusAioBot\src\database" />
     </key>
   </component>
   <component name="RunManager" selected="Python.user">
@@ -466,11 +435,18 @@
       <option name="project" value="LOCAL" />
       <updated>1738339210109</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="16.03.2025 add ai agent">
+      <option name="closed" value="true" />
+      <created>1742066845577</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1742066845577</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[suchef-orders-status-bot] 30.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 promos update" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 production v2" />
@@ -495,6 +471,7 @@
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new migration" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method" />
+    <MESSAGE value="16.03.2025 add ai agent" />
+    <option name="LAST_COMMIT_MESSAGE" value="16.03.2025 add ai agent" />
   </component>
 </project>

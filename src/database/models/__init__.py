@@ -1,7 +1,7 @@
 __all__ = (
-    "User",
-    "Dialog"
+    ""
 )
 
-from src.database.models.user import User
-from src.database.models.dialog import Dialog
+from src.database.models.base_model import BaseModel
+from src.database.models.user_model import UserModel
+from src.database.models.dialog_model import DialogM

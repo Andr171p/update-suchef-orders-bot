@@ -1,24 +1,18 @@
 import contextlib
-from typing import AsyncIterator, Optional
+from typing import AsyncIterator
+
 from sqlalchemy.ext.asyncio import (
     AsyncConnection,
-    AsyncEngine,
     AsyncSession,
     async_sessionmaker,
     create_async_engine
 )
 
-from src.database.base import get_database_url
-
 
 class DatabaseManager:
-    def __init__(self) -> None:
-        self._engine: Optional[AsyncEngine] = None
-        self._sessionmaker: Optional[async_sessionmaker[AsyncSession]] = None
-
-    def init(self) -> None:
+    def __init__(self, url: str) -> None:
         self._engine = create_async_engine(
-            url=get_database_url(),
+            url=url,
             echo=True
         )
         self._sessionmaker = async_sessionmaker(

@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING, Sequence
 
 if TYPE_CHECKING:
-    from src.database.manager import DatabaseManager
+    from src.database.database_manager import DatabaseManager
 
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
