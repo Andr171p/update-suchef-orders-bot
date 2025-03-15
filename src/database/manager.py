@@ -19,7 +19,7 @@ class DatabaseManager:
     def init(self) -> None:
         self._engine = create_async_engine(
             url=get_database_url(),
-            # echo=True
+            echo=True
         )
         self._sessionmaker = async_sessionmaker(
             bind=self._engine,

@@ -66,3 +66,34 @@ class UserCRUD(BaseCRUD):
                 await session.delete(user)
                 await session.commit()
         return user.scalar_one_or_none()
+
+
+import asyncio
+import csv
+
+
+def save_users_to_csv(users: list[User]) -> None:
+    with open("users.csv", mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+
+        # Запись заголовков
+        writer.writerow(["user_id", "username", "phone", "created_at"])
+
+        # Запись данных пользователей
+        for user in users:
+            writer.writerow([
+                user.user_id,
+                user.username,
+                user.phone,
+                user.created_at.strftime("%Y-%m-%d %H:%M:%S"),
+            ])
+
+
+async def main() -> None:
+    crud = UserCRUD()
+    users = await crud.read_all()
+    print(users)
+    print(len(users))
+    save_users_to_csv(users)
+
+asyncio.run(main())

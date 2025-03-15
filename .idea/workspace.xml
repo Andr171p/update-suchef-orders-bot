@@ -4,11 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method">
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method">
+      <change afterPath="$PROJECT_DIR$/prompts/checker_prompt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/base_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/checker_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/generation_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/order_status_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/retriever_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/rewriter_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/states/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/states/graph_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/bonus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/promo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/chatbot_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/order_status_notification_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/promos_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/users_use_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/crud/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/provider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/base_http.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/http_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/http_requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/responses/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/responses/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/base_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/responses/json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/json_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/responses/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/responses/text_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_exchange.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/dialog.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +81,7 @@
     "Python.auth.executor": "Run",
     "Python.bonus.executor": "Run",
     "Python.bonus_api.executor": "Run",
+    "Python.checker_node.executor": "Run",
     "Python.client.executor": "Run",
     "Python.config.executor": "Run",
     "Python.dialog.executor": "Run",
@@ -58,10 +99,12 @@
     "Python.promotions.executor": "Run",
     "Python.service (1).executor": "Run",
     "Python.service.executor": "Run",
+    "Python.user.executor": "Run",
     "Python.validators.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/andre/TyuiuRAG"
+    "last_opened_file_path": "C:/Users/andre/TyuiuRAG",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +121,7 @@
       <recent name="C:\Users\andre\OrderStatusAioBot\src\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dialog">
+  <component name="RunManager" selected="Python.user">
     <configuration name="bonus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
@@ -101,7 +144,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bonus_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="checker_node" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,11 +153,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/apis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ai_agent/nodes" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/apis/bonus_api.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ai_agent/nodes/checker_node.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,7 +210,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="promo_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,11 +219,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/apis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/crud" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/apis/promo_api.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/crud/user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.user" />
+        <item itemvalue="Python.checker_node" />
         <item itemvalue="Python.dialog" />
         <item itemvalue="Python.bonus" />
         <item itemvalue="Python.orders_api" />
-        <item itemvalue="Python.promo_api" />
-        <item itemvalue="Python.bonus_api" />
       </list>
     </recent_temporary>
   </component>
@@ -415,11 +458,18 @@
       <option name="project" value="LOCAL" />
       <updated>1738338469896</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method">
+      <option name="closed" value="true" />
+      <created>1738339210109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1738339210109</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[suchef-orders-status-bot] 29.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 refactoring" />
     <MESSAGE value="[suchef-orders-status-bot] 30.12.2024 promos update" />
@@ -444,6 +494,7 @@
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 routing" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new migration" />
     <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method" />
-    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 new dialog crud method" />
+    <MESSAGE value="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-status-bot] dev: 31.01.2025 dialog repo new method" />
   </component>
 </project>

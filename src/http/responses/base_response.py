@@ -12,5 +12,5 @@ class BaseResponse(ABC):
         return 200 <= response.status < 300
 
     @abstractmethod
-    async def get_data(self, response: "ClientResponse") -> Any:
+    async def fetch(self, response: "ClientResponse") -> Any:
         raise NotImplemented

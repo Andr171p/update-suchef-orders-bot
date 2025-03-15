@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING, Any
 if TYPE_CHECKING:
     from aiohttp import ClientSession, ClientResponse
 
-    from src.http.responses.base import BaseResponse
+    from src.http.responses.base_response import BaseResponse
 
 
 class HTTPRequests:

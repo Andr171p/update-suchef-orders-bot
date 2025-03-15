@@ -23,12 +23,3 @@ class DialogRepository(BaseRepository):
         dialogs = await self._crud.read_all()
         return [DialogSchema(**dialog.__dict__) for dialog in dialogs]
 
-
-import asyncio
-async def main() -> None:
-    repo = DialogRepository()
-    dialogs = await repo.get_by_user_id(123)
-    print(dialogs)
-
-
-asyncio.run(main())

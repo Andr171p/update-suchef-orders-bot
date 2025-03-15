@@ -5,7 +5,7 @@ from typing import Callable, Awaitable, Any
 from aio_pika.abc import AbstractIncomingMessage
 
 
-from src.rabbit_mq.client import RabbitClient
+from src.rabbit_mq.rabbit_client import RabbitClient
 
 
 log = logging.getLogger(__name__)

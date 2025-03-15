@@ -6,7 +6,7 @@ from aio_pika.abc import (
     AbstractRobustChannel
 )
 
-from src.rabbit_mq.exc import RabbitException
+from src.rabbit_mq.exceptions import RabbitException
 from src.config import settings
 
 
