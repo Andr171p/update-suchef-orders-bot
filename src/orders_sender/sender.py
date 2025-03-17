@@ -4,7 +4,7 @@ from aiogram import Bot
 
 from src.schemas.order import OrderSchema
 from src.message.order import OrderMessage
-from src.repository.user import user_repository
+from src.repository.user_repository import user_repository
 
 
 log = logging.getLogger(__name__)

@@ -4,16 +4,127 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="[suchef-orders-status-bot] 30.12.2024 production v2 add flyers fix">
-      <change afterPath="$PROJECT_DIR$/src/app/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/commands/menu.py" afterDir="false" />
+    <list default="true" id="1ccf23c3-9911-40a7-b5d3-8d89b4c2d031" name="Changes" comment="16.03.2025 refactoring database">
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/base_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/checker_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/decision_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/generation_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/orders_status_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/retriever_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/nodes/rewriter_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/states/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/states/graph_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai_agent/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/bonus_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/orders_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/bonus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/promo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/entities/user_message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/chatbot_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/use_cases/order_status_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/crud/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/crud/base_crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/crud/dialog_crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/crud/user_crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/database_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/models/dialog_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/models/user_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/models/user_relation_mixin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/bonus_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/orders_dto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/base_http.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/http_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/http_requests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/responses/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/responses/base_response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/responses/json_response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/responses/text_response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/file_readers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/formatters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/validators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenters/order_status_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenters/order_status_presenter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/base_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/dialog_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/sender/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/sender/base_sender_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/sender/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/sender/telegram_sender_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/flyers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/flyers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/promos.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/promos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migration/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/register.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/base_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/prompts/decision_prompt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/service/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/abc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/abc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/checker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai_agent/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/abc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/flyers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/orders_sender/sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_sender/sender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/rabbit_exchange.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/flyers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/promo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/files.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/format.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Готов для выдачи.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Готов для выдачи.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Готовится.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Готовится.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Доставлен.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Доставлен.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Завершен успешно.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Завершен успешно.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Новый.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Новый.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Отменен.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Отменен.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Передан курьеру.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Передан курьеру.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Передан на кухню.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Передан на кухню.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Приготовлен.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Приготовлен.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Принят оператором.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Принят оператором.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photos/statuses/Укомплектован.png" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/photos/Укомплектован.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Готов для выдачи.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Готов для выдачи.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Готовится.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Готовится.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Доставлен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Доставлен.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Завершен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Завершен.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Отменен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Отменен.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Передан курьеру.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Передан курьеру.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Передан на кухню.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Передан на кухню.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Приготовлен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Приготовлен.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Принят оператором/Курьер.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Принят оператором/Курьер.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Принят оператором/Самовывоз.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Принят оператором/Самовывоз.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/texts/statuses/Укомплектован.txt" beforeDir="false" afterPath="$PROJECT_DIR$/statuses/templates/Укомплектован.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +139,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -39,28 +155,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.files.executor&quot;: &quot;Run&quot;,
-    &quot;Python.flyers.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order (3).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
-    &quot;Python.promo (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.promotions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.service (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuRAG&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.files.executor": "Run",
+    "Python.flyers.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order (1).executor": "Run",
+    "Python.order (2).executor": "Run",
+    "Python.order (3).executor": "Run",
+    "Python.order.executor": "Run",
+    "Python.order_status (1).executor": "Run",
+    "Python.order_status.executor": "Run",
+    "Python.order_status_presenter.executor": "Run",
+    "Python.promo (1).executor": "Run",
+    "Python.promotions.executor": "Run",
+    "Python.service (1).executor": "Run",
+    "Python.service.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/andre/TyuiuRAG"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusAioBot\static\photos\flyers" />
@@ -68,14 +186,14 @@
       <recent name="C:\Users\andre\OrderStatusAioBot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\andre\OrderStatusAioBot\src\service" />
-      <recent name="C:\Users\andre\OrderStatusAioBot\src" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\statuses\photos" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\statuses\templates" />
       <recent name="C:\Users\andre\OrderStatusAioBot\src\database" />
-      <recent name="C:\Users\andre\OrderStatusAioBot" />
-      <recent name="C:\Users\andre\OrderStatusAioBot\src\app\statics\photos" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\database\models" />
+      <recent name="C:\Users\andre\OrderStatusAioBot\src\service" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.flyers">
+  <component name="RunManager" selected="Python.order">
     <configuration name="flyers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
@@ -142,7 +260,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="order (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="order" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,11 +269,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/repository" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/core/entities" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/repository/order.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/core/entities/order.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,7 +282,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="order (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="order_status_presenter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusAioBot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,11 +291,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/message" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/presenters" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/message/order.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/presenters/order_status_presenter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +306,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.order" />
+        <item itemvalue="Python.order_status_presenter" />
         <item itemvalue="Python.flyers" />
         <item itemvalue="Python.order (1)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.order (3)" />
-        <item itemvalue="Python.order (2)" />
       </list>
     </recent_temporary>
   </component>

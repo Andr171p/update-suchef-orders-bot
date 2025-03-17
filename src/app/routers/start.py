@@ -6,7 +6,7 @@ from src.config import settings
 from src.utils.files import load_json_async
 from src.app.keyboards.start import start_kb
 from src.app.keyboards.menu import menu_kb
-from src.repository.user import user_repository
+from src.repository.user_repository import user_repository
 
 
 start_router = Router()

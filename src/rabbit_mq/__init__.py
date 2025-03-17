@@ -6,8 +6,8 @@ __all__ = (
     "RabbitConsumer"
 )
 
-from src.rabbit_mq.base import RabbitBase
-from src.rabbit_mq.exc import RabbitException
-from src.rabbit_mq.exchange import RabbitExchange
-from src.rabbit_mq.client import RabbitClient
-from src.rabbit_mq.consumer import RabbitConsumer
+from src.rabbit_mq.rabbit_base import RabbitBase
+from src.rabbit_mq.exceptions import RabbitException
+from src.rabbit_mq.rabbit_exchange import RabbitExchange
+from src.rabbit_mq.rabbit_client import RabbitClient
+from src.rabbit_mq.rabbit_consumer import RabbitConsumer
