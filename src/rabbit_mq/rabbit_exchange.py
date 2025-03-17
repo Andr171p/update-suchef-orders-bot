@@ -17,10 +17,7 @@ class RabbitExchange:
     async def declare_exchange(self) -> None:
         if self._channel is None:
             raise RabbitException("Channel must be initialized first")
-        await self._channel.declare_exchange(
-            name=settings.rabbit.queue_name,
-            type=ExchangeType.FANOUT,
-        )
+        await self._channel.declare_exchange(settings.rabbit.queue_name, ExchangeType.FANOUT)
 
     async def declare_bind_queue(
             self,
@@ -28,11 +25,6 @@ class RabbitExchange:
             exclusive: bool = True
     ) -> AbstractRobustQueue:
         await self.declare_exchange()
-        queue = await self._channel.declare_queue(
-            name=queue_name,
-            exclusive=exclusive
-        )
-        await queue.bind(
-            exchange=settings.rabbit.queue_name
-        )
+        queue = await self._channel.declare_queue(queue_name, exclusive=exclusive)
+        await queue.bind(exchange=settings.rabbit.queue_name)
         return queue

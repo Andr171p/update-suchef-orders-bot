@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
 
-class FlyersSchema(BaseModel):
+class BonusSchema(BaseModel):
     flyers: int
     chips: int

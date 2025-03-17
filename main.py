@@ -1,15 +1,15 @@
 import logging
 import asyncio
 
-from src.app.run import run_orders_bot
-from src.orders_sender.run import run_orders_sender
+from src.app.run import run_bot
+from src.utils.notification import notify_users_with_orders_messages
 
 
 async def main() -> None:
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(message)s')
     await asyncio.gather(
-        run_orders_bot(),
-        run_orders_sender()
+        run_bot(),
+        notify_users_with_orders_messages()
     )
 
 
