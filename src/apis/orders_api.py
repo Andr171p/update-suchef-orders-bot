@@ -7,13 +7,13 @@ from src.dto import OrdersDTO
 
 
 class OrdersAPI:
-    def __init__(self, url: str) -> None:
-        self._url = url
+    def __init__(self, base_url: str) -> None:
+        self._base_url = base_url
 
     async def get_by_phone_number(self, phone_number: str) -> List[Union[Order, None]]:
         async with HTTPClient(JsonResponse()) as http_client:
             response = await http_client.post(
-                url=self._url,
+                url=self._base_url,
                 json={
                     "command": "status",
                     "telefon": phone_number

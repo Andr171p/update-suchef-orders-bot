@@ -1,15 +1,13 @@
 import os
 
-from typing import TYPE_CHECKING, Literal
-
-if TYPE_CHECKING:
-    from aiogram.types import InputFile, InlineKeyboardMarkup
+from typing import Literal
 
 from aiogram.types import FSInputFile
+from aiogram.types import InputFile, InlineKeyboardMarkup
 
+from src.config import BASE_DIR
 from src.core.entities import Order
 from src.misc.file_readers import read_txt
-from src.config import BASE_DIR
 
 
 ORDER_STATUSES = Literal[

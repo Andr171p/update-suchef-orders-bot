@@ -1,12 +1,18 @@
-from typing import TYPE_CHECKING, Literal
+from typing import Literal
 
-if TYPE_CHECKING:
-    from langchain_core.prompts import BasePromptTemplate
-    from langchain_core.language_models import BaseChatModel
-    from langchain_core.output_parsers import BaseTransformOutputParser
+from langchain_core.runnables import Runnable
+from langchain.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.language_models import BaseChatModel
 
 from src.ai_agent.nodes.base_node import BaseNode
-from src.ai_agent.states import GraphState
+from src.ai_agent.state import State
+
+from src.misc.file_readers import read_txt
+from src.config import BASE_DIR
+
+
+TEMPLATE_PATH = BASE_DIR / "prompts" / ...
 
 
 NEXT_STEPS = Literal[
@@ -17,20 +23,21 @@ NEXT_STEPS = Literal[
 
 class DecisionNode(BaseNode):
     def __init__(
-            self,
-            prompt: "BasePromptTemplate",
-            model: "BaseChatModel",
-            parser: "BaseTransformOutputParser"
-    ) -> None:
-        self._chain = prompt | model | parser
+            self, model: BaseChatModel) -> None:
+        self._model = model
+
+    def _create_chain(self) -> Runnable:
+        prompt = ChatPromptTemplate.from_template(read_txt(TEMPLATE_PATH))
+        return prompt | self._model | StrOutputParser()
 
     @staticmethod
     def _get_action_from_response(response: str) -> NEXT_STEPS:
         return "retrieve" if "retrieve" in response else "order_status"
 
-    async def execute(self, state: GraphState) -> dict:
+    async def execute(self, state: State) -> dict:
         print("---DECISION MAKING---")
+        chain = self._create_chain()
         question = state["question"]
-        response = await self._chain.invoke({"question": question})
+        response = await chain.ainvoke({"question": question})
         action = self._get_action_from_response(response)
         return {"question": question, "action": action}

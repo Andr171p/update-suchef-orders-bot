@@ -6,7 +6,7 @@ if TYPE_CHECKING:
     from langchain_core.output_parsers import BaseTransformOutputParser
 
 from src.ai_agent.nodes.base_node import BaseNode
-from src.ai_agent.states import GraphState
+from src.ai_agent.state import State
 
 
 class RewriterNode(BaseNode):
@@ -18,7 +18,7 @@ class RewriterNode(BaseNode):
     ) -> None:
         self._chain = prompt | model | parser
 
-    def execute(self, state: GraphState) -> dict:
+    def execute(self, state: State) -> dict:
         print("---REWRITE QUESTION---")
         question = state["question"]
         rewritten_question = self._chain.invoke({"question": question})
